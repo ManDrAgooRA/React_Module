@@ -10,7 +10,7 @@ function PrivateRoute({ path, component: Component }) {
                 if (localStorage.getItem('session_id')) {
                     return <Component />;
                 }
-                return <Redirect to={`${process.env.REACT_APP_REDIRECT_LINK}/login`} />;
+                return <Redirect to='/login' />;
 
             }}
         />
