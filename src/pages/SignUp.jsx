@@ -21,9 +21,9 @@ export default function SignUp() {
     const history = useHistory();
     const [sex, setSex] = useState('female');
     const [date, setDate] = useState(null);
-    const [fetchToken] = useFetching(async () => {
+        const [fetchToken] = useFetching(async () => {
         const token = await api.getToken();
-        const redirectUrl = `https://www.themoviedb.org/authenticate/${token}?redirect_to=${process.env.REACT_APP_REDIRECT_LINK}`;
+        const redirectUrl = `https://www.themoviedb.org/authenticate/${token}?redirect_to=${process.env.REACT_APP_REDIRECT_LINK}/login`;
         window.open(redirectUrl, '_blank', 'noopener noreferrer');
     })
 
