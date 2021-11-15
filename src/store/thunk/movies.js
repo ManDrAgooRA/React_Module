@@ -7,6 +7,8 @@ import {
     fetchLanguageListSuccess,
 } from '../actions';
 
+// import {fetchFoundMoviesSeccess, fetchSelectedMovieSuccess, fetchFavoriteMoviesSuccess,fetchFilterBuyGenerSuccess,fetchGenreSuccess} from '../actions' 
+
 import * as api from '../../apis'
 
 export const fetchSelectedMovie = (id) => {

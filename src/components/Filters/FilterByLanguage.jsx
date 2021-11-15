@@ -10,9 +10,9 @@ import { setSelectedLanguage } from '../../store/actions'
 import { fetchLangaugeList } from '../../store/thunk'
 
 export default function FilterByLanguage() {
-    const { languageList, selectedLanguage } = useSelector((state) => state.movies)
+    const { languageList, selectedLanguage } = useSelector((state) => state.filter)
     const dispatch = useDispatch();
-
+    
     useEffect(() => {
         if (languageList.length === 0) {
             dispatch(fetchLangaugeList())

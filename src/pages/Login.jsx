@@ -35,7 +35,7 @@ export default function Login() {
 
     useEffect(() => {
         if (isLogin) {
-            history.push(`${process.env.REACT_APP_REDIRECT_LINK}/movies`)
+            history.push('/movies')
         }
 
     }, [isLogin, history])

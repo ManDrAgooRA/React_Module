@@ -50,7 +50,7 @@ export default function SignUp() {
 
     const onSubmit = data => {
         fetchToken()
-        history.push(`${process.env.REACT_APP_REDIRECT_LINK}/movies`)
+        history.push('/movies')
         reset()
     };
 

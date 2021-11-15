@@ -8,7 +8,7 @@ import Sort from './Sort';
 export default function Aside() {
     const dispatch = useDispatch();
     const [searchDisabled, setSearchDisabled] = useState(true);
-    const { sortString, selectedGener, selectedLanguage } = useSelector((state) => state.movies)
+    const { sortString, selectedGener, selectedLanguage } = useSelector((state) => state.filter)
 
     useEffect(() => {
         setSearchDisabled(true)

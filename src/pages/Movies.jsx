@@ -12,7 +12,8 @@ import Aside from '../components/Aside';
 
 export default function Movies() {
     const dispatch = useDispatch();
-    const { movies, isLoading, totalPages, selectedGener, sortString, searchString, selectedLanguage } = useSelector((state) => state.movies)
+    const { movies, isLoading, totalPages} = useSelector((state) => state.movies)
+    const { selectedGener, sortString, searchString, selectedLanguage } = useSelector((state) => state.filter)
     const [searchValue, setSearchValue] = useState('')
     const [page, setPage] = useState()
 

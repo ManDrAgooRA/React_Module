@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setSelecetdFilter } from '../../store/actions';
 
 export default function FilterByGener() {
-    const { genres, selectedGener } = useSelector((state) => state.movies)
+    const { genres, selectedGener } = useSelector((state) => state.filter)
     const dispatch = useDispatch();
 
     const handleToggle = (value) => {

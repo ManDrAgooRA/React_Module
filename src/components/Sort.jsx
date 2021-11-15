@@ -10,10 +10,11 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { setSortString } from '../store/actions'
+// import {setSortString} from ''
 
 export default function Sort() {
     const dispatch = useDispatch();
-    const { sortString } = useSelector((state) => state.movies)
+    const { sortString } = useSelector((state) => state.filter)
 
     const handleChange = (event) => {
         dispatch(setSortString(event.target.value));

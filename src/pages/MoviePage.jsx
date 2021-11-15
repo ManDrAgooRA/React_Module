@@ -26,7 +26,7 @@ export default function MoviePage() {
     }
 
     const handelerBack = () => {
-        history.push(`${process.env.REACT_APP_REDIRECT_LINK}/movies`)
+        history.goBack()
         dispatch(clearSeletedMovie())
     }
 
@@ -66,8 +66,8 @@ export default function MoviePage() {
                         <Box sx={{ position: 'relative', width: '50px', height: '50px' }}>
                             <CircularStatic progress={Math.round(selectedMovies.vote_average * 10)} />
                         </Box>
-                        <p>{selectedMovies.id}</p>
-                        <p>original_language :{selectedMovies.original_language}</p>
+                        <p>id: {selectedMovies.id}</p>
+                        <p>language : {selectedMovies.original_language}</p>
                         <p>{selectedMovies.overview}</p>
                         <p>Genres:</p>
                         <ul>

@@ -3,11 +3,6 @@ import { moviesActions } from '../actions'
 export const initialState = {
     movies: [],
     genres: [],
-    selectedGener: [],
-    languageList: [],
-    selectedLanguage: '',
-    sortString: '',
-    searchString: '',
     currentPage: 1,
     totalPages: 1,
     selectedMovies: null,

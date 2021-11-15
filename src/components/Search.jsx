@@ -8,17 +8,15 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import MyInput from './UI/Input/MyInput'
 import MyButton from './UI/Button/MyButton'
 import { fetchFoundMovies } from '../store/thunk'
-import { setSearchtString } from './../store/actions/movies';
+import { setSearchtString } from './../store/actions';
 import { useSelector } from 'react-redux';
 
 export default function Search({
     setPage,
     page,
-    // searchValue, 
-    // setSearchValue 
 }) {
     const dispatch = useDispatch()
-    const { searchString } = useSelector((state) => state.movies)
+    const { searchString } = useSelector((state) => state.filter)
     const [searchValue, setSearchValue] = useState()
 
     useEffect(() => {
@@ -95,13 +93,9 @@ export default function Search({
 Search.propTypes = {
     setPage: PropTypes.func,
     page: PropTypes.number,
-    searchValue: PropTypes.string,
-    setSearchValue: PropTypes.func,
 }
 
 Search.defaultProps = {
     page: 1,
-    searchValue: '',
     setPage: () => { },
-    setSearchValue: () => { },
 }
