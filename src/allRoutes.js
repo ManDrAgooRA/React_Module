@@ -13,5 +13,5 @@ export const allRoutes = [
     { path: `${process.env.REACT_APP_REDIRECT_LINK}/movies`, component: Movies, isPrivate: true },
     { path: `${process.env.REACT_APP_REDIRECT_LINK}/movies/:id`, component: MoviePage, isPrivate: true },
     { path: `${process.env.REACT_APP_REDIRECT_LINK}/userinformation`, component: UserInformation, isPrivate: true },
-    { path: '*', component: Error },
+    { path: `${process.env.REACT_APP_REDIRECT_LINK}*`, component: Error },
 ]
